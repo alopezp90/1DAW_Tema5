@@ -25,7 +25,7 @@ public class Ej03 {
         } else {
             System.out.println("Los arrays no son iguales");
         }
-        
+
         vector[random.nextInt(20)] = 6.3;
         System.out.println(Arrays.toString(vector));
         System.out.println(Arrays.toString(vectorCopia));

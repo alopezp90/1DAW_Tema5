@@ -12,12 +12,11 @@ public class Ej04 {
     public static void main(String[] args) {
 
         int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-        int n;
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce valor (0-9)");
-        n = sc.nextInt();
+        int n = sc.nextInt();
 
         for (int i = 0; i < array.length; i++) {
             if (n == array[i]) {
