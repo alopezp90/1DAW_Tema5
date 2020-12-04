@@ -20,11 +20,11 @@ public class Ej04 {
 
         for (int i = 0; i < array.length; i++) {
             if (n == array[i]) {
-                System.out.println(n + " se encuentra en la posicion " + (i + 1) + " del array");
+                System.out.println(n + " se encuentra en la posicion " + i + " del array");
                 break;
             }
         }
         int posicion = Arrays.binarySearch(array, n);
-        System.out.println(n + " se encuentra en la posicion " + (posicion + 1) + " del array");
+        System.out.println(n + " se encuentra en la posicion " + posicion + " del array");
     }
 }

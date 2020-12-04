@@ -10,7 +10,7 @@ public class Ej01 {
 
     public static void main(String[] args) {
 
-        int[] ARRAY = {1, 2, 3, 4, 5, 6};
+        final int[] ARRAY = {1, 2, 3, 4, 5, 6};
         int suma = 0;
 
         for (int i = 0; i < ARRAY.length; i++) {
