@@ -1,4 +1,4 @@
-package arrays151617;
+package ej15;
 
 /**
  * @author Alberto López Puertas
