@@ -29,14 +29,8 @@ public class Ej24 {
         }
 
         //imprime listas 1 y 2
-        for (Integer elemento : lista1) {
-            System.out.print(elemento + " ");
-        }
-        System.out.println("");
-        for (Integer elemento : lista2) {
-            System.out.print(elemento + " ");
-        }
-        System.out.println("\n------------------");
+        imprimeLista(lista1);
+        imprimeLista(lista2);
 
         //crea e imprime lista 3
         for (Integer elemento : lista1) {
@@ -44,10 +38,7 @@ public class Ej24 {
                 lista3.add(elemento);
             }
         }
-        for (Integer elemento : lista3) {
-            System.out.print(elemento + " ");
-        }
-        System.out.println("\n------------------");
+        imprimeLista(lista3);
         
         //crea e imprime lista 4
         for (Integer elemento : lista1) {
@@ -60,7 +51,11 @@ public class Ej24 {
                 lista4.add(elemento);
             }
         }
-        lista4.forEach(elemento -> {
+        imprimeLista(lista4);
+    }
+    
+    private static void imprimeLista(ArrayList lista) {
+        lista.forEach(elemento -> {
             System.out.print(elemento + " ");
         });
         System.out.println("\n------------------");

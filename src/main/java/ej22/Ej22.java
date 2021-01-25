@@ -15,5 +15,9 @@ public class Ej22 {
         String frase = sc.nextLine();
         
         String[] palabras = frase.split(" ");
+        
+        for(String palabra : palabras) {
+            System.out.println(palabra);
+        }
     }
 }
