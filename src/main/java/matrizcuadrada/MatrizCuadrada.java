@@ -32,19 +32,57 @@ public class MatrizCuadrada {
     }
 
     public int[] buscaNumeroEspecial() {
-        int[] coordenada = new int[2];
-        
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                if(matriz[i][j].compruebaFila()){
-                    if(matriz[i][j].compruebaColumna()) {
-                        coordenada[0] = i;
-                        coordenada[1] = j;
-                        return coordenada;
+                if (this.compruebaFila(i, j)) {
+                    if (this.compruebaColumna(i, j)) {
+                        return new int[]{i, j};
                     }
                 }
             }
         }
-        return coordenada;
+        return new int[]{-1, -1};
+    }
+
+    //devuelve true si es el mayor de su fila
+    public boolean compruebaFila(int i, int j) {
+        for (int k = 0; k < this.matriz[0].length; k++) {
+            if (this.matriz[i][k] > this.matriz[i][j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //devuelve true si es el menor de su columna
+    public boolean compruebaColumna(int i, int j) {
+        for (int k = 0; k < this.matriz[0].length; k++) {
+            if (this.matriz[k][j] < this.matriz[i][j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        String txt = "";
+        for (int i = 0; i < this.matriz.length; i++) {
+            for (int j = 0; j < this.matriz[i].length; j++) {
+                txt = txt + matriz[i][j] + "\t";
+            }
+            txt = txt + "\n";
+        }
+        return txt;
+    }
+    
+    public static void main(String[] args) {
+        MatrizCuadrada matriz = new MatrizCuadrada(3);
+        matriz.daValores();
+        System.out.println(matriz.toString());
+        
+        int[] coordenadas = matriz.buscaNumeroEspecial();
+        
+        System.out.println("posicion del numero 'especial' (" + coordenadas[0] + "," + coordenadas[1] + ")");
     }
 }
