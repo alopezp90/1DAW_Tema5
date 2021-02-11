@@ -1,7 +1,5 @@
 package ej20ampliacion;
 
-import static ej20.Ej20.avion;
-
 /**
  * @author Alberto López Puertas
  * <alopezp90@gmail.com>
